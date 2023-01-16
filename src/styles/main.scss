@@ -251,7 +251,9 @@ header {
 
 // Be Creative-------------------
 .always{
-  //!!!!!!!!!!!!!! display: flex;!!!!!!!!!!!
+  padding-left: 1rem;
+  font-size: 3.5rem;
+
 
   .h1 {
     font-size: 3rem;
@@ -261,9 +263,13 @@ header {
     white-space: wrap;
     overflow: hidden;
     position: relative;
-    width: 850px;
+    width: 100%;
     z-index: 1;
     color:$main-color; 
+
+
+    color: transparent;
+    -webkit-text-stroke: 0.15rem $main-color;
     
     .h1 span {
       font-size: 30px;
@@ -284,6 +290,8 @@ header {
       .word1, .word2, .word3 {
         font-family: tahoma;
         color: $main-color;
+
+        
       }
     }
   }
@@ -917,6 +925,8 @@ p{
     margin-top: 150px;
     padding-top: 70px;
   }
+
+ 
 
   .welcome-text h1{
     margin-left: -2rem;
