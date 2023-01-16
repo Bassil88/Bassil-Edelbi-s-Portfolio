@@ -5,6 +5,16 @@
 // $secondary: rgb(34, 255, 0);
 // $danger: #ff36ee;
 
+$main-color: #25b3d3;
+$primary-color:white;
+$secondary-color:#1a1f22;
+
+.dark_mode{
+    $primary-color:black;
+    $secondary-color:white;
+}
+
+
 // $grid-breakpoints: (
 //   xs: 0,
 //   sm: 576px,
