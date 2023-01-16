@@ -75,7 +75,7 @@ header {
           list-style-type: none;
 
           // link tag part----------
-          &:hover a {
+          &:hover a{
               letter-spacing: 3px;
               color: $secondary-color;
 
@@ -449,8 +449,105 @@ header {
   }
 }
 //* animated text ENDS-----------------------------------------------
+.skill-container{
+	margin: 0;
+	padding: 0;
+	background-color: #333;
+}
 
 
+
+li{ /*style the li tag*/
+	list-style-type: none;
+	font-family: sans-serif;
+}
+.skills{ /*style the text*/
+	width: 500px;
+	margin: 60px auto;
+	color: #fff;
+
+
+}
+
+.skills li{ /*set margin of li*/
+	margin: 20px 0;
+}
+
+.bar{ /*style the bar*/
+	background-color: #353b48;
+	display: block;
+	height: 2px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0 0 10px #2187e7b3;
+}
+
+.bar span{ /*style the span tag*/
+	height: 2px;
+	float: left;
+	background-color: #2187e7;
+}
+
+.html{ /*set skills and animation of html*/
+	width: 80%;
+	animation: html 2s;
+}
+
+.css{ /*set skills and animation of css*/
+	width: 93%;
+	animation: css 2s;
+}
+
+.javascript{ /*set skills and animation of javascript*/
+	width: 50%;
+	animation: javascript 2s;
+}
+
+.jquery{ /*set skills and animation of jquery*/
+	width: 30%;
+	animation: jquery 2s;
+}
+
+@keyframes html{ /*animate html skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 80%;
+	}
+}
+
+@keyframes css{ /*animate css skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 93%;
+	}
+}
+
+@keyframes javascript{ /*animate javascript skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 50%;
+	}
+}
+
+@keyframes jquery{ /*animate jquery skills*/
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 30%;
+	}
+}
 
 // ------------toggle-section
 .toggle-container{
