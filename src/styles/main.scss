@@ -4,6 +4,8 @@
 @import "projects";
 @import "about";
 @import "contact";
+@import "bootstrap";
+
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -23,7 +25,6 @@ body{
   font-family: 'Montserrat', sans-serif;
   color: $primary-color;
   background-color: $secondary-color;
-
   overflow-x: hidden;
 
   
