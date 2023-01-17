@@ -1,15 +1,15 @@
-:root{
---primary-color:white;
---secondary-color:#1a1f22;   
-}
+// :root{
+// --primary-color:white;
+// --secondary-color:#1a1f22;   
+// }
 
 $main-color: #25b3d3;
 $primary-color:white;
 $secondary-color:#1a1f22;
 
 .dark_mode{
-    --primary-color:black;
-    --secondary-color:white;
+    $primary-color:black;
+    $secondary-color:white;
 }
 
 
