@@ -4,7 +4,6 @@
   "description": "My first Portfolio",
   "scripts": {
     "start": "rm -rf dev-serve && parcel src/index.html --dist-dir dev-serve",
-    "bootstrap": "rm -rf dev-serve && parcel src/bootstrap-project.html --dist-dir dev-serve",
     "build": "rm -rf build && parcel build src/index.html --dist-dir build --public-url ./",
     "publish": "gh-pages -d build"
   },
