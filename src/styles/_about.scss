@@ -1,16 +1,118 @@
-.container-welcome{
-  display: flex;
-      @include phone {
-      flex-direction: column;
-      margin: .5rem auto;
-      h1{
-        font-size: 2.5rem;
+// always Be Creative Section-------------------
+.always-container{
+  padding-left: 1rem;
+
+  .always-be {
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.5;
+    text-transform: uppercase;
+    white-space: wrap;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    color:var(--main-color); 
+    color: transparent;
+    -webkit-text-stroke: 0.15rem var(--main-color);
+
+    
+    .always-be span {
+      font-size: 30px;
+      margin-left: 0;
+      color:var(--main-color); 
+    }
+
+    .message {
+      background-color: yellow;
+      display: block;
+      font-weight: 900;
+      overflow: hidden; 
+      position: absolute;
+      padding-left: 0.5rem;
+      top: 0.2rem;
+      left: 310px;
+      animation: openclose 5s ease-in-out infinite;
+
+      .word1, .word2, .word3 {
+        font-family: tahoma;
+        color: var(--main-color);
       }
-      h2{
-        font-size: 3.2rem;
-      }
+    }
   }
 
+  
+  @keyframes openclose {
+    0% {
+      top: 0.2rem;
+      width: 0;
+    }
+    5% {
+      width: 0;
+    }
+    15% {
+      width: 230px;
+    }
+    30% {
+      top: 0.2rem;
+      width: 230px;
+    }
+    33% {
+      top: 0.2rem;
+      width: 0;
+    }
+    35% {
+      top: 0.2rem;
+      width: 0;
+    }
+    38% {
+      top: -4.5rem;
+
+    }
+    48% {
+      top: -4.5rem;
+      width: 190px;
+    }
+    62% {
+      top: -4.5rem;
+      width: 190px;
+    }
+    66% {
+      top: -4.5rem;
+      width: 0;
+      text-indent: 0;
+    }
+    71% {
+      top: -9rem;
+      width: 0;
+      text-indent: 5px;
+    }
+    86% {
+      top: -9rem;
+      width: 285px;
+    }
+    95% {
+      top: -9rem;
+      width: 285px;
+    }
+    98% {
+      top: -9rem;
+      width: 0;
+      text-indent: 5px;
+    }
+    100% {
+      top: 0;
+      width: 0;
+      text-indent: 0;
+    }
+  }
+}
+
+
+
+.container-welcome{
+  display: flex;
+  justify-content: space-evenly;
   width: 100%;
   padding: 1rem;
   width: 80%;
@@ -20,153 +122,63 @@
   inset -5px -5px 10px rgba(0, 0, 0, 0.4),
   -5px -5px 10px rgba(255, 255, 255, 0.08);
   margin: 2rem auto;
-}
 
-.welcome-text p{
-  text-align: flex-start;
-  width: 70%;
-}
-
-.welcome-text h2{
-/* text-align: justify; */
-  font-size: 2rem;
-  text-align: flex-start;
-  width: 70%;
-  margin: 1rem 0;
-}
-
-.welcome-text h1{
-  text-align: justify;
-  font-size: 3rem;
-  text-align: flex-start;
-  width: 70%;
-  margin:1rem 0;
-}
-
-
-.welcome-img{
-  float: right;
-  
-}
-.welcome-img img{
-  width: 300px;
-  border-radius: 2px;
-  transition: all 300ms ease-in-out;
-  display: flex;
-  justify-content: end;
-  align-items: flex-end;
-  &:hover{
-    border-radius: 190px;
-    transform: translate(-3%, 3%) scale(1.0) rotate(352deg);
-  }
-}
-
-
-
-// Be Creative-------------------
-.always-container{
-    padding-left: 1rem;
-  
-    .always-be {
-      font-size: 3rem;
-      font-weight: 100;
-      line-height: 1.5;
-      text-transform: uppercase;
-      white-space: wrap;
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      z-index: 1;
-      color:var(--main-color); 
-      color: transparent;
-      -webkit-text-stroke: 0.15rem var(--main-color);
-  
-      
-      .always-be span {
-        font-size: 30px;
-        margin-left: 0;
-        color:var(--main-color); 
-      }
-  
-      .message {
-        background-color: yellow;
-        display: block;
-        font-weight: 900;
-        overflow: hidden; 
-        position: absolute;
-        padding-left: 0.5rem;
-        top: 0.2rem;
-        left: 310px;
-        animation: openclose 5s ease-in-out infinite;
-
-        .word1, .word2, .word3 {
-          font-family: tahoma;
-          color: var(--main-color);
-        }
-      }
+  @include phone {
+    flex-direction: column;
+    margin: .5rem auto;
+    h1{
+      font-size: 2.5rem;
     }
-    @keyframes openclose {
-      0% {
-        top: 0.2rem;
-        width: 0;
-      }
-      5% {
-        width: 0;
-      }
-      15% {
-        width: 230px;
-      }
-      30% {
-        top: 0.2rem;
-        width: 230px;
-      }
-      33% {
-        top: 0.2rem;
-        width: 0;
-      }
-      35% {
-        top: 0.2rem;
-        width: 0;
-      }
-      38% {
-        top: -4.5rem;
-  
-      }
-      48% {
-        top: -4.5rem;
-        width: 190px;
-      }
-      62% {
-        top: -4.5rem;
-        width: 190px;
-      }
-      66% {
-        top: -4.5rem;
-        width: 0;
-        text-indent: 0;
-      }
-      71% {
-        top: -9rem;
-        width: 0;
-        text-indent: 5px;
-      }
-      86% {
-        top: -9rem;
-        width: 285px;
-      }
-      95% {
-        top: -9rem;
-        width: 285px;
-      }
-      98% {
-        top: -9rem;
-        width: 0;
-        text-indent: 5px;
-      }
-      100% {
-        top: 0;
-        width: 0;
-        text-indent: 0;
-      }
+    h2{
+      font-size: 3.2rem;
     }
   }
+  .welcome-text{
+
+    .welcome-text h1{
+      text-align: justify;
+      font-size: 4.5rem;
+      text-align: flex-start;
+      margin:1rem 0;
+    }
+
+    .welcome-text h2{
+      font-size: 2.5rem;
+      text-align: flex-start;
+      margin: 1rem 0;
+    }
+
+    
+    
+
+
+  }
+
+  .animated-text h6 span{
+    font-size: 3.5rem;
+    color: var(--main-color);
+  }
+
+  .welcome-img img{
+    width: 300px;
+    margin-top: 20%;
+    border-radius: 2px;
+    transition: all 300ms ease-in-out;
+
+    &:hover{
+      border-radius: 190px;
+      transform: translate(-3%, 3%) scale(1.0) rotate(352deg);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
