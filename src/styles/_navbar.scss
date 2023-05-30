@@ -1,0 +1,183 @@
+
+@mixin phone {
+  @media only screen and (max-width:768px) {
+    @content;
+  }
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12rem;
+  z-index: 99999999;
+  border-top: -10rem;
+// Navbar-section------------------ /
+  nav {
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:transparent;
+    min-height:12vh;
+    
+    @include phone{
+      .nav-container-li{
+        display: flex;
+        flex-grow: 1;
+      }
+    }
+
+    .nav-container-ul {
+      width:100%;
+      background-color: var(--secondary-color);
+      box-shadow: -2px 0px 11px 7px hsl(191deg 70% 49%);
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+
+      .nav-container-li {
+          position:relative;
+          width: 155px;
+          height: 3rem;
+          margin:23px;
+          list-style-type: none;
+
+          // link tag part----------
+          &:hover a{
+              letter-spacing: 3px;
+              color: var(--secondary-color);
+
+          }
+          &:hover a::before {
+              transform: skewX(45deg) translateX(200%);
+          }
+
+          a{
+              position:absolute;
+              top:0;
+              left:0;
+              width:100%;
+              height:100%;
+              display:flex;
+              justify-content:center;
+              align-items:center;
+              background: rgba(255,255,255,0.05); 
+              box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+              border-top: 1px solid rgba(255,255,255,0.1);
+              border-bottom:1px solid rgba(255,255,255,0.1);
+              border-radius: 30px;
+              color: var(--primary-color);
+              z-index: 1;
+              font-size: 1rem;
+              font-weight: bold;
+              letter-spacing: 1px;
+              text-decoration: none;
+              overflow: hidden;
+              transition: 0.3s;
+              backdrop-filter: blur(15px);
+
+              &::before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 50%;
+                  height: 100%;
+                  background: linear-gradient(to left, rgba(255,255,255,0.15),
+                  transparent);
+                  transform: skewX(45deg) translateX(0);
+                  transition: 0.3s;
+                }
+              
+            }
+
+          }
+
+      // linear grey hover--
+      .nav-container-li::before{
+        content:'';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -5px;
+        width:30px;
+        height:10px;
+        border-radius: 10px;
+        transition: 0.3s;
+        transition-delay: 0.3s;
+
+      } 
+    
+      .nav-container-li:hover::before{
+        bottom: 0;
+        height: 50%;
+        width: 80%;
+        border-radius: 30px;
+        transition-delay: 0.3s;
+      }
+
+      .nav-container-li::after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -5px;
+        width:30px;
+        height:10px;
+        border-radius: 10px;
+        transition: 0.3s;
+        transition-delay: 0.3s;
+      }
+      .nav-container-li:hover::after{
+        top: 0;
+        height: 50%;
+        width: 80%;
+        border-radius: 30px;
+        transition-delay: 0.3s;
+      }
+
+      .nav-container-li::before,
+      .nav-container-li::after{
+        background: var(--primary-color);
+        box-shadow: 0 0 5px var(--primary-color),
+        0 0 15px var(--primary-color),
+        0 0 30px var(--primary-color),
+        0 0 60px var(--primary-color);
+      }
+      }
+  }
+}
+// Navbar-section ENDS------------------- 
+
+
+
+// ------------------double-down arrow 
+.fa-angle-double-down {
+  font-size: 4rem;
+  margin-top: 100px;
+  padding-top: 70px;
+  color: var(--primary-color);
+  animation: upanddown 2s linear infinite;
+  color: var(--primary-color);
+
+  @-webkit-keyframes upanddown {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+  }
+
+  @keyframes upanddown {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+  }
+}
