@@ -26,3 +26,4 @@ This is my portfolio website showcasing my projects and skills. It was built usi
 - JavaScript (only for the Darkmode toggle)
 - Font Awesome
 
+have fun visiting [my Portfolio](https://bassil88.github.io/Bassil-Edelbi-s-Portfolio/)
