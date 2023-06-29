@@ -93,9 +93,23 @@
     }
   }
   
-  .social-media-icon ul li a::before{
+  .social-media-icon ul li .github-icon::before{
     font-family: "fontAwesome";
     content: "\f09b";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 6rem;
+    height: 0;
+    color: var(--main-color);
+    border-bottom: 4px solid var(--main-color);
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+  }
+
+  .social-media-icon ul li .linkedin-icon::before{
+    font-family: "fontAwesome";
+    content: "\f08c";
     position: absolute;
     top: 0;
     left: 0;
